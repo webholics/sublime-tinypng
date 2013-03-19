@@ -1,0 +1,26 @@
+[{
+    "caption": "Preferences",
+    "mnemonic": "n",
+    "id": "preferences",
+    "children": [{
+        "caption": "Package Settings",
+        "mnemonic": "P",
+        "id": "package-settings",
+        "children": [{
+            "caption": "TinyPNG",
+            "children": [{
+                "command": "open_file", "args":
+                {
+                        "file": "${packages}/TinyPNG/TinyPNG.sublime-settings"
+                },
+                "caption": "Settings – Default"
+            }, {
+                "command": "open_file", "args":
+                {
+                        "file": "${packages}/User/TinyPNG.sublime-settings"
+                },
+                "caption": "Settings – User"
+            }]
+        }]
+    }]
+}]
