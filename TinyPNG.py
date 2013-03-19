@@ -37,7 +37,9 @@ class TinypngApiCall(threading.Thread):
             result = urlopen(request)
 
             # download shrinked file
-            self.response = json.loads(result.read().decode('utf8'))
+            body = result.read().decode('utf8')
+            print body
+            self.response = json.loads(body)
             out_data = urlopen(self.response['output']['url']).read()
             if len(out_data) > 0:
                 f = open(self.png_file, 'wb')
@@ -150,7 +152,6 @@ class TinypngCommand(sublime_plugin.WindowCommand):
 
         in_size = 0
         out_size = 0
-        print(len(finished))
         for thread in finished:
             if thread.error:
                 self.output(thread.error + '\n')
