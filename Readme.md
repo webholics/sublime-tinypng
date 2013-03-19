@@ -12,6 +12,12 @@ Enter TinyPNG API key under Preferences -> Package Settings -> TinyPNG -> Settin
        "api_key": "YOUR API KEY"
     }
 
+## Usage
+
+Just use the command line in Sublime to execute the command: "Optimize Folder"
+
+In the second step you choose a folder in which all PNGs will be shrinked using TinyPNG.
+
 ## License
 
 (The MIT License)
