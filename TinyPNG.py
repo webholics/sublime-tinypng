@@ -12,7 +12,6 @@ try:
 except ImportError:
     from urllib2 import Request, HTTPError, urlopen
 
-#API_KEY = 'lRQWxodiu8SDMvLYS5ijqHlZpGaBQdGW'
 TINYPNG_URL = 'http://api.tinypng.org/api/shrink'
 
 
@@ -155,7 +154,7 @@ class TinypngCommand(sublime_plugin.WindowCommand):
         for thread in finished:
             if thread.error:
                 self.output(thread.error + '\n')
-            else:
+            elif thread.response:
                 in_size += thread.response['input']['size']
                 out_size += thread.response['output']['size']
 
